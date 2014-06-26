@@ -1,3 +1,17 @@
+{- |
+Module      :  Data.List.Indexed.Conic
+Description :  A library providing length-indexed and element-indexed lists which sit somewhere between homogeneous and fully heterogeneous lists.
+Copyright   :  Copyright (c) 2014 Kenneth Foner
+
+Maintainer  :  kenneth.foner@gmail.com
+Stability   :  experimental
+Portability :  non-portable
+
+This module implements conic lists, which are lists where every element is of type @(f a)@ for /some/ @a@, but the @a@ 
+index may vary. This sits between homogeneous and fully heterogeneous lists in terms of expressivity and also the ease
+to manipulate.
+-}
+
 {-# LANGUAGE ConstraintKinds       #-}
 {-# LANGUAGE DataKinds             #-}
 {-# LANGUAGE PolyKinds             #-}
@@ -14,12 +28,11 @@ module Data.List.Indexed.Conic where
 
 import Data.Numeric.Witness.Peano
 
--- Tagged lists are lists where each element is an (f a) for some a, but the a may be different for each element. Types of elements are kept track of in the type of the list.
-
 infixr 5 :-:
 data x :-: y
 data Nil
 
+-- | Conic lists are lists where each element is an (f a) for some a, but the a may be different for each element. Types of elements are kept track of in the type of the list.
 data ConicList f ts where
    (:-:) :: f a -> ConicList f rest -> ConicList f (a :-: rest)
    ConicNil  :: ConicList f Nil
