@@ -18,10 +18,10 @@ Example of using a conic list:
 data IsJust
 data IsNothing
 
-data IndexedMaybe i a where
-   IsJust    :: a -> IndexedMaybe IsJust a
-   IsNothing :: IndexedMaybe IsNothing a
+data IndexedMaybe a i where
+   IsJust    :: a -> IndexedMaybe a IsJust
+   IsNothing :: IndexedMaybe a IsNothing
 
-y :: ConicList (IsJust :-: IsNothing :-: IsJust :-: Nil) Int
+y :: ConicList (IndexedMaybe Int) (IsJust :-: IsNothing :-: IsJust :-: Nil)
 y = IsJust 1 :-: IsNothing :-: IsJust 2 :-: ConicNil
 ```
