@@ -3,13 +3,14 @@
 
 name:                IndexedList
 version:             0.1.0.0
-synopsis:            Length-indexed and "conic" lists, along with functions to convert between them.
--- description:         
--- license:             
--- license-file:        LICENSE
+synopsis:            Length-indexed and element-indexed lists which sit somewhere between homogeneous and fully heterogeneous lists.
+description:         This library implements /counted lists/ linked to type-level naturals indexing length, compatible with the Peano natural numbers found in "Data.Numeric.Witness.Peano", as well as so-called /conic lists/, which are linked to a type index listing the type indices of partially-heterogeneous values contained within.
+license:             BSD3
+license-file:        LICENSE
 author:              Kenneth Foner
-maintainer:          kenny.foner@gmail.com
--- copyright:           
+maintainer:          kenneth.foner@gmail.com
+copyright:           Copyright (c) 2014 Kenneth Foner
+homepage:            https://github.com/kwf/IndexedList
 category:            Data
 build-type:          Simple
 -- extra-source-files:  
