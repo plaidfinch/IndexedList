@@ -13,8 +13,7 @@ x = 1 ::: 2 ::: 3 ::: CountedNil
 Example of using a conic list:
 
 ```Haskell
-{-# LANGUAGE GADTs     #-}
-{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE GADTs #-}
 
 data IsJust
 data IsNothing
