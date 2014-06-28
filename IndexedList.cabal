@@ -2,8 +2,8 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 name:                IndexedList
-version:             0.1.0.0
-synopsis:            Length-indexed and element-indexed lists which sit somewhere between homogeneous and fully heterogeneous lists.
+version:             0.1.0.1
+synopsis:            Length- and element-indexed lists sitting somewhere between homogeneous and fully heterogeneous.
 description:         This library implements /counted lists/ linked to type-level naturals indexing length, compatible with the Peano natural numbers found in "Data.Numeric.Witness.Peano", as well as so-called /conic lists/, which are linked to a type index listing the type indices of partially-heterogeneous values contained within.
 license:             BSD3
 license-file:        LICENSE
